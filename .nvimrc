@@ -13,8 +13,9 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'qpkorr/vim-bufkill'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'vim-syntastic/syntastic'
 
 " Initialize plugin system
 call plug#end()
