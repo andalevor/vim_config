@@ -21,12 +21,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
+autocmd filetype c,cpp set cindent
+autocmd filetype c,cpp set ts=4 sw=4 softtabstop=0
+autocmd filetype c,cpp set noexpandtab
+autocmd filetype c,cpp set cinoptions=N-s,g0,(0,u0,U0,j1,ws,Ws
+autocmd filetype python set expandtab
+autocmd filetype python set ts=4 sw=4 softtabstop=4
+
+set colorcolumn=80
 
 set number
 
@@ -62,6 +64,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
 
 " NERDCommenter
 " Add spaces after comment delimiters by default
