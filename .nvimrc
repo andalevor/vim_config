@@ -1,7 +1,7 @@
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin(stdpath('data'))
+call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
